@@ -1,4 +1,4 @@
-package manager;
+package dao;
 
 import java.util.ArrayList;
 
@@ -20,43 +20,43 @@ public class BaseballManager implements AbstractBaseballManager {
 
     @Override
     public Player searchId(String id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'searchId'");
+
+        return null;
     }
 
     @Override
     public boolean insertPlayer(Player player) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'insertPlayer'");
+
+        return false;
     }
 
     @Override
     public boolean deletePlayer(String id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deletePlayer'");
+        
+        return false;
     }
 
     @Override
     public boolean updatePlayer(Player player) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updatePlayer'");
+
+        return false;
     }
 
     @Override
     public ArrayList<Player> playerListForSalary(int minSalary, int maxSalary) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'playerListForSalary'");
+
+        return null;
     }
 
     @Override
     public ArrayList<Player> bestPlayers() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'bestPlayers'");
+
+        return null;
     }
 
     @Override
     public ArrayList<Player> playerListForType(int type) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'playerListForType'");
+
+        return null;
     }
 }
