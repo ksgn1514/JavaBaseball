@@ -18,10 +18,10 @@ public class BaseballUI {
 			try {
 				menuNum = input.nextInt();
 				switch (menuNum) {
-					case 1: add();		break;
-					case 2: delete();	break;
-					case 3: update();	break;
-					case 4: search();	break;
+                    case 1: search();	break;
+					case 2: add();		break;
+					case 3: delete();	break;
+					case 4: update();	break;
 					case 0: exit();		return;
 					default:
 						System.out.println("[오류] 다시 선택하세요.");
@@ -40,14 +40,23 @@ public class BaseballUI {
 	public void printMainMenu() {
 		System.out.println();
 		System.out.println("[ 야구 선수 정보 관리 ]");
-		System.out.println("1. 선수 정보 입력");
-		System.out.println("2. 선수 정보 삭제");
-		System.out.println("3. 선수 정보 수정");
-		System.out.println("4. 검색");
+        System.out.println("1. 선수 정보 검색");
+		System.out.println("2. 선수 정보 입력");
+		System.out.println("3. 선수 정보 삭제");
+		System.out.println("4. 선수 정보 수정");
+
 		System.out.println("0. 프로그램 종료");
 		System.out.print("** 번호 선택 > ");
 	}
 
+    /**
+	 * 선수 정보 검색
+	 */
+    public void search(){
+        System.out.println("선수 정보 검색");
+    }
+
+    
     /**
 	 * 선수 정보 입력
 	 */
@@ -69,13 +78,7 @@ public class BaseballUI {
         System.out.println("선수 정보 수정");
     }
 
-    /**
-	 * 선수 정보 검색
-	 */
-    public void search(){
-        System.out.println("선수 정보 검색");
-    }
-
+    
     /**
 	 * 프로그램 종료
 	 */
