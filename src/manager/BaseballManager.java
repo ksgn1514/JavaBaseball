@@ -57,8 +57,15 @@ public class BaseballManager implements AbstractBaseballManager {
 
     @Override
     public boolean updatePlayer(Player player) {
-
-        return false;
+        Player findPlayer = null;
+		for (int i = 0; i < playerList.size(); i++) {
+			findPlayer = playerList.get(i);
+			if (player.getId().equals(findPlayer.getId())) {
+				findPlayer.setSalary(player.getSalary());
+				return true;
+			}
+		}
+		return false;
     }
 
     @Override

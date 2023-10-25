@@ -5,11 +5,11 @@ import java.util.Scanner;
 import manager.DBConfig;
 
 public class DeleteUI {
+    // 스캐너 선언
+	Scanner input = new Scanner(System.in);
 
     public DeleteUI(){
-        // 스캐너 선언
-	    Scanner input = new Scanner(System.in);
-
+        
         String id = null;
 		
 		System.out.println();
