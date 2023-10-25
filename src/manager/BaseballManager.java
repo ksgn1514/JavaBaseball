@@ -22,14 +22,24 @@ public class BaseballManager implements AbstractBaseballManager {
 
     @Override
     public Player searchId(String id) {
-
-        return null;
+        Player findPlayer = null;
+		
+		for (int i = 0; i < playerList.size(); i++) {
+			findPlayer = playerList.get(i);
+			if (id.equals(findPlayer.getId())) {
+				return findPlayer;
+			}
+		}
+		return null;
     }
 
     @Override
     public boolean insertPlayer(Player player) {
-
-        return false;
+        if (searchId(player.getId()) != null) {
+			return false;
+		}
+		playerList.add(player);
+		return true;
     }
 
     @Override
