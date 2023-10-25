@@ -1,12 +1,7 @@
 package ui;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import dto.Player;
-import manager.BaseballManager;
-import manager.DBConfig;
 import ui.components.AddUI;
 import ui.components.DeleteUI;
 import ui.components.SearchUI;
