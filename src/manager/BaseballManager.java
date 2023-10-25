@@ -46,14 +46,35 @@ public class BaseballManager implements AbstractBaseballManager {
 
     @Override
     public ArrayList<Player> playerListForSalary(int minSalary, int maxSalary) {
-
-        return null;
+        ArrayList<Player> list = new ArrayList<>();
+		Player player = null;
+		
+		for (int i = 0; i < playerList.size(); i++) {
+			player = playerList.get(i);
+			if (minSalary <= player.getSalary() && player.getSalary() <= maxSalary) {
+				list.add(player);
+			}
+		}
+		return list;
     }
 
     @Override
     public ArrayList<Player> bestPlayers() {
-
-        return null;
+        ArrayList<Player> list = new ArrayList<>();
+		Player player = null;
+		int cnt;
+		
+		for (int i = 0; i < playerList.size(); i++) {
+			player = playerList.get(i);
+			cnt = 0;
+			for (int j = 0; j < playerList.size(); j++) {
+				if (player.getWar() < playerList.get(j).getWar()) {
+					cnt++;
+				}
+			}
+			if (cnt == 0) list.add(player);
+		}
+		return list;
     }
 
     @Override
