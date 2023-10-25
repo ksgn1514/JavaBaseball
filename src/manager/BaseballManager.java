@@ -44,8 +44,15 @@ public class BaseballManager implements AbstractBaseballManager {
 
     @Override
     public boolean deletePlayer(String id) {
-        
-        return false;
+        Player player = null;
+		for (int i = 0; i < playerList.size(); i++) {
+			player = playerList.get(i);
+			if (id.equals(player.getId())) {
+				playerList.remove(i);
+				return true;
+			}
+		}
+		return false;
     }
 
     @Override
