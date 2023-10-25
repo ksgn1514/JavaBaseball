@@ -1,9 +1,13 @@
-package dao;
+package manager;
 
 import java.util.ArrayList;
 
 import dto.Player;
 
+
+/**
+ * BaseballManager에서 구현할 인터페이스 정의 (dao)
+ */
 public interface AbstractBaseballManager {
     /**
 	 * 전달받은 번호를 리스트에서 검색한다. 
